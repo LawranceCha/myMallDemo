@@ -22,6 +22,8 @@
         <module>mall-product</module>
         <module>mall-ware</module>
         <module>mall-admin</module>
+        <module>mall-generator</module>
+        <module>mall-common</module>
     </modules>
 
 </project>
