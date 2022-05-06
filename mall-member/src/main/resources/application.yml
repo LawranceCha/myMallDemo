@@ -1,13 +1,19 @@
-spring:
-    datasource:
-        username: root
-        password: root
-        url: jdbc:mysql://162.14.74.203:3306/malldemo_ums
-        driver-class-name: com.mysql.cj.jdbc.Driver
-mybatis-plus:
-    global-config:
-        db-config:
-            id-type: auto
-    mapper-locations: classpath:/mapper**/*.xml
-server:
-    port: 8000
+#spring:
+#    datasource:
+#        username: root
+#        password: root
+#        url: jdbc:mysql://162.14.74.203:3306/malldemo_ums
+#        driver-class-name: com.mysql.cj.jdbc.Driver
+#    cloud:
+#        nacos:
+#            discovery:
+#                server-addr: 162.14.74.203:8848
+#    application:
+#        name: malldemo-member
+#mybatis-plus:
+#    global-config:
+#        db-config:
+#            id-type: auto
+#    mapper-locations: classpath:/mapper**/*.xml
+#server:
+#    port: 8000

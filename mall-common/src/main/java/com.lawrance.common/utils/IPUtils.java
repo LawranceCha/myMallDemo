@@ -8,7 +8,7 @@
 
 package com.lawrance.common.utils;
 
-import com.alibaba.druid.util.StringUtils;
+import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -1,0 +1,10 @@
+spring:
+    application:
+        name: mall-coupon
+    cloud:
+        nacos:
+            config:
+                server-addr: 162.14.74.203:8848
+                file-extension: yml
+            discovery:
+                server-addr: 162.14.74.203:8848

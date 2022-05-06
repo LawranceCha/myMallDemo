@@ -1,18 +1,15 @@
-package com.lawrance.mall.mallcoupon;
+package com.lawrance.mall.mallgateway;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
-@MapperScan("com.lawrance.mall.mallcoupon.dao")
 @EnableDiscoveryClient
 @SpringBootApplication
-public class MallCouponApplication {
+public class MallGatewayApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MallCouponApplication.class, args);
+        SpringApplication.run(MallGatewayApplication.class, args);
     }
 
 }
-
