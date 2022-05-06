@@ -5,6 +5,8 @@ import java.util.Map;
 
 
 import javax.annotation.Resource;
+
+import com.lawrance.mall.mallmember.feign.ICouponFeignService;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,6 +32,22 @@ import com.lawrance.common.utils.R;
 public class MemberController {
     @Resource
     private MemberService memberService;
+
+    @Resource
+    ICouponFeignService couponFeignService;
+
+
+    /**
+     * 获取会员所有优惠卷列表
+     */
+    @RequestMapping("/memberCouponList")
+    public R memberCouponList(){
+        MemberEntity memberEntity = new MemberEntity();
+        memberEntity.setNickname("张三");
+        R r = couponFeignService.memberCoupons();
+
+        return R.ok().put("member", memberEntity).put("coupon", r.get("coupon"));
+    }
 
     /**
      * 列表
