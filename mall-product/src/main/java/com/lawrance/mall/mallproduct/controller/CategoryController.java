@@ -1,6 +1,8 @@
 package com.lawrance.mall.mallproduct.controller;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.Map;
 
 
@@ -30,6 +32,17 @@ import com.lawrance.common.utils.R;
 public class CategoryController {
     @Resource
     private CategoryService categoryService;
+
+    /**
+     * 列表
+     */
+    @RequestMapping("/listWithTree")
+    //@RequiresPermissions("mallproduct:category:list")
+    public R listWithTree(){
+        List<CategoryEntity> listWithTree = categoryService.listWithTree();
+
+        return R.ok().put("listWithTree", listWithTree);
+    }
 
     /**
      * 列表
@@ -81,8 +94,8 @@ public class CategoryController {
      */
     @RequestMapping("/delete")
     //@RequiresPermissions("mallproduct:category:delete")
-    public R delete(@RequestBody Long[] catIds){
-		categoryService.removeByIds(Arrays.asList(catIds));
+    public R delete(@RequestBody List<Long> catIds){
+		categoryService.removeMenuByIds(catIds);
 
         return R.ok();
     }
